@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C6A84819-9B47-4457-8F39-6CCCDACB223E</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GetUp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E414CF39-5D0B-4AF8-BB62-DA28D7D2D5A2</key>
+		<string>https://github.com/tbogosia/gettup.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GetUp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E414CF39-5D0B-4AF8-BB62-DA28D7D2D5A2</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/tbogosia/gettup.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E414CF39-5D0B-4AF8-BB62-DA28D7D2D5A2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E414CF39-5D0B-4AF8-BB62-DA28D7D2D5A2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Gitt</string>
+		</dict>
+	</array>
+</dict>
+</plist>

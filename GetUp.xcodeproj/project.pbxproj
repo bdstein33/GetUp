@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A57C0F2F01F540E2B22C89AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D45EC5113304D8AB16B6B96 /* libPods.a */; };
+		BE78FB9418F86F98000B8490 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE91B98B18EF10AA008CF76B /* Main_iPhone.storyboard */; };
+		BE91B97A18EF10AA008CF76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97918EF10AA008CF76B /* Foundation.framework */; };
+		BE91B97C18EF10AA008CF76B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97B18EF10AA008CF76B /* CoreGraphics.framework */; };
+		BE91B97E18EF10AA008CF76B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97D18EF10AA008CF76B /* UIKit.framework */; };
+		BE91B98418EF10AA008CF76B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE91B98218EF10AA008CF76B /* InfoPlist.strings */; };
+		BE91B98618EF10AA008CF76B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BE91B98518EF10AA008CF76B /* main.m */; };
+		BE91B98A18EF10AA008CF76B /* TBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE91B98918EF10AA008CF76B /* TBAppDelegate.m */; };
+		BE91B99018EF10AA008CF76B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE91B98E18EF10AA008CF76B /* Main_iPad.storyboard */; };
+		BE91B99318EF10AA008CF76B /* TBViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE91B99218EF10AA008CF76B /* TBViewController.m */; };
+		BE91B99518EF10AA008CF76B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE91B99418EF10AA008CF76B /* Images.xcassets */; };
+		BE91B99C18EF10AA008CF76B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B99B18EF10AA008CF76B /* XCTest.framework */; };
+		BE91B99D18EF10AA008CF76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97918EF10AA008CF76B /* Foundation.framework */; };
+		BE91B99E18EF10AA008CF76B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97D18EF10AA008CF76B /* UIKit.framework */; };
+		BE91B9A618EF10AA008CF76B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE91B9A418EF10AA008CF76B /* InfoPlist.strings */; };
+		BE91B9A818EF10AA008CF76B /* GetUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE91B9A718EF10AA008CF76B /* GetUpTests.m */; };
+		BEB0E53619003CE0003DB327 /* TBYouTubePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEB0E53419003CE0003DB327 /* TBYouTubePlayerViewController.m */; };
+		BECECD8C190839BE002E76E5 /* TBPageViewParent.m in Sources */ = {isa = PBXBuildFile; fileRef = BECECD8B190839BE002E76E5 /* TBPageViewParent.m */; };
+		BECFA5F9190607D20052968B /* XCDYouTubeVideoPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BECFA5F8190607D20052968B /* XCDYouTubeVideoPlayerViewController.m */; };
+		BECFA5FB190608400052968B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECFA5FA190608400052968B /* AVFoundation.framework */; };
+		BECFA5FD190608A30052968B /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BECFA5FC190608A30052968B /* MediaPlayer.framework */; };
+		BECFA60019060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BECFA5FF19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m */; };
+		BEE45FA41900880000A04C59 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = BEE45FA11900880000A04C59 /* Assets */; };
+		BEEC90B018FE364000228A66 /* TBSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BEEC90AF18FE364000228A66 /* TBSecondViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE91B99F18EF10AA008CF76B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE91B96E18EF10AA008CF76B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE91B97518EF10AA008CF76B;
+			remoteInfo = GetUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D45EC5113304D8AB16B6B96 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B523BEE5D80341C787F10F3D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BE91B97618EF10AA008CF76B /* GetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE91B97918EF10AA008CF76B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE91B97B18EF10AA008CF76B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BE91B97D18EF10AA008CF76B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BE91B98118EF10AA008CF76B /* GetUp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GetUp-Info.plist"; sourceTree = "<group>"; };
+		BE91B98318EF10AA008CF76B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE91B98518EF10AA008CF76B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BE91B98718EF10AA008CF76B /* GetUp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GetUp-Prefix.pch"; sourceTree = "<group>"; };
+		BE91B98818EF10AA008CF76B /* TBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBAppDelegate.h; sourceTree = "<group>"; };
+		BE91B98918EF10AA008CF76B /* TBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBAppDelegate.m; sourceTree = "<group>"; };
+		BE91B98C18EF10AA008CF76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		BE91B98F18EF10AA008CF76B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		BE91B99118EF10AA008CF76B /* TBViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TBViewController.h; sourceTree = "<group>"; };
+		BE91B99218EF10AA008CF76B /* TBViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TBViewController.m; sourceTree = "<group>"; };
+		BE91B99418EF10AA008CF76B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE91B99A18EF10AA008CF76B /* GetUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GetUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE91B99B18EF10AA008CF76B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		BE91B9A318EF10AA008CF76B /* GetUpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GetUpTests-Info.plist"; sourceTree = "<group>"; };
+		BE91B9A518EF10AA008CF76B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BE91B9A718EF10AA008CF76B /* GetUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetUpTests.m; sourceTree = "<group>"; };
+		BEB0E53319003CE0003DB327 /* TBYouTubePlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYouTubePlayerViewController.h; sourceTree = "<group>"; };
+		BEB0E53419003CE0003DB327 /* TBYouTubePlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYouTubePlayerViewController.m; sourceTree = "<group>"; };
+		BECECD8A190839BE002E76E5 /* TBPageViewParent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBPageViewParent.h; sourceTree = "<group>"; };
+		BECECD8B190839BE002E76E5 /* TBPageViewParent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBPageViewParent.m; sourceTree = "<group>"; };
+		BECFA5F7190607D20052968B /* XCDYouTubeVideoPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCDYouTubeVideoPlayerViewController.h; sourceTree = "<group>"; };
+		BECFA5F8190607D20052968B /* XCDYouTubeVideoPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCDYouTubeVideoPlayerViewController.m; sourceTree = "<group>"; };
+		BECFA5FA190608400052968B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BECFA5FC190608A30052968B /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BECFA5FE19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBYouTubeSearchResultCellTableViewCell.h; sourceTree = "<group>"; };
+		BECFA5FF19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBYouTubeSearchResultCellTableViewCell.m; sourceTree = "<group>"; };
+		BEE45FA11900880000A04C59 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		BEEC90AE18FE364000228A66 /* TBSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBSecondViewController.h; sourceTree = "<group>"; };
+		BEEC90AF18FE364000228A66 /* TBSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBSecondViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE91B97318EF10AA008CF76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BECFA5FD190608A30052968B /* MediaPlayer.framework in Frameworks */,
+				BECFA5FB190608400052968B /* AVFoundation.framework in Frameworks */,
+				BE91B97C18EF10AA008CF76B /* CoreGraphics.framework in Frameworks */,
+				BE91B97E18EF10AA008CF76B /* UIKit.framework in Frameworks */,
+				BE91B97A18EF10AA008CF76B /* Foundation.framework in Frameworks */,
+				A57C0F2F01F540E2B22C89AA /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE91B99718EF10AA008CF76B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE91B99C18EF10AA008CF76B /* XCTest.framework in Frameworks */,
+				BE91B99E18EF10AA008CF76B /* UIKit.framework in Frameworks */,
+				BE91B99D18EF10AA008CF76B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE91B96D18EF10AA008CF76B = {
+			isa = PBXGroup;
+			children = (
+				BE91B97F18EF10AA008CF76B /* GetUp */,
+				BE91B9A118EF10AA008CF76B /* GetUpTests */,
+				BE91B97818EF10AA008CF76B /* Frameworks */,
+				BE91B97718EF10AA008CF76B /* Products */,
+				B523BEE5D80341C787F10F3D /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+			wrapsLines = 0;
+		};
+		BE91B97718EF10AA008CF76B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE91B97618EF10AA008CF76B /* GetUp.app */,
+				BE91B99A18EF10AA008CF76B /* GetUpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE91B97818EF10AA008CF76B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BECFA5FC190608A30052968B /* MediaPlayer.framework */,
+				BECFA5FA190608400052968B /* AVFoundation.framework */,
+				BE91B97918EF10AA008CF76B /* Foundation.framework */,
+				BE91B97B18EF10AA008CF76B /* CoreGraphics.framework */,
+				BE91B97D18EF10AA008CF76B /* UIKit.framework */,
+				BE91B99B18EF10AA008CF76B /* XCTest.framework */,
+				4D45EC5113304D8AB16B6B96 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BE91B97F18EF10AA008CF76B /* GetUp */ = {
+			isa = PBXGroup;
+			children = (
+				BE91B98818EF10AA008CF76B /* TBAppDelegate.h */,
+				BE91B98918EF10AA008CF76B /* TBAppDelegate.m */,
+				BE91B98B18EF10AA008CF76B /* Main_iPhone.storyboard */,
+				BE91B98E18EF10AA008CF76B /* Main_iPad.storyboard */,
+				BE91B99118EF10AA008CF76B /* TBViewController.h */,
+				BE91B99218EF10AA008CF76B /* TBViewController.m */,
+				BEB0E53319003CE0003DB327 /* TBYouTubePlayerViewController.h */,
+				BEB0E53419003CE0003DB327 /* TBYouTubePlayerViewController.m */,
+				BEEC90AE18FE364000228A66 /* TBSecondViewController.h */,
+				BEEC90AF18FE364000228A66 /* TBSecondViewController.m */,
+				BECECD8A190839BE002E76E5 /* TBPageViewParent.h */,
+				BECECD8B190839BE002E76E5 /* TBPageViewParent.m */,
+				BECFA5FE19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.h */,
+				BECFA5FF19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m */,
+				BECFA5F7190607D20052968B /* XCDYouTubeVideoPlayerViewController.h */,
+				BECFA5F8190607D20052968B /* XCDYouTubeVideoPlayerViewController.m */,
+				BEE45FA11900880000A04C59 /* Assets */,
+				BE91B99418EF10AA008CF76B /* Images.xcassets */,
+				BE91B98018EF10AA008CF76B /* Supporting Files */,
+			);
+			path = GetUp;
+			sourceTree = "<group>";
+		};
+		BE91B98018EF10AA008CF76B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE91B98118EF10AA008CF76B /* GetUp-Info.plist */,
+				BE91B98218EF10AA008CF76B /* InfoPlist.strings */,
+				BE91B98518EF10AA008CF76B /* main.m */,
+				BE91B98718EF10AA008CF76B /* GetUp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE91B9A118EF10AA008CF76B /* GetUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE91B9A718EF10AA008CF76B /* GetUpTests.m */,
+				BE91B9A218EF10AA008CF76B /* Supporting Files */,
+			);
+			path = GetUpTests;
+			sourceTree = "<group>";
+		};
+		BE91B9A218EF10AA008CF76B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE91B9A318EF10AA008CF76B /* GetUpTests-Info.plist */,
+				BE91B9A418EF10AA008CF76B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE91B97518EF10AA008CF76B /* GetUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE91B9AB18EF10AA008CF76B /* Build configuration list for PBXNativeTarget "GetUp" */;
+			buildPhases = (
+				745A2716DA6D4D43B9E66032 /* Check Pods Manifest.lock */,
+				BE91B97218EF10AA008CF76B /* Sources */,
+				BE91B97318EF10AA008CF76B /* Frameworks */,
+				BE91B97418EF10AA008CF76B /* Resources */,
+				558420FB9ED64A489299C987 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GetUp;
+			productName = GetUp;
+			productReference = BE91B97618EF10AA008CF76B /* GetUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE91B99918EF10AA008CF76B /* GetUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE91B9AE18EF10AA008CF76B /* Build configuration list for PBXNativeTarget "GetUpTests" */;
+			buildPhases = (
+				BE91B99618EF10AA008CF76B /* Sources */,
+				BE91B99718EF10AA008CF76B /* Frameworks */,
+				BE91B99818EF10AA008CF76B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE91B9A018EF10AA008CF76B /* PBXTargetDependency */,
+			);
+			name = GetUpTests;
+			productName = GetUpTests;
+			productReference = BE91B99A18EF10AA008CF76B /* GetUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE91B96E18EF10AA008CF76B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "GetUp LLC";
+				TargetAttributes = {
+					BE91B97518EF10AA008CF76B = {
+						DevelopmentTeam = 88JZ2W5V48;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					BE91B99918EF10AA008CF76B = {
+						TestTargetID = BE91B97518EF10AA008CF76B;
+					};
+				};
+			};
+			buildConfigurationList = BE91B97118EF10AA008CF76B /* Build configuration list for PBXProject "GetUp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE91B96D18EF10AA008CF76B;
+			productRefGroup = BE91B97718EF10AA008CF76B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE91B97518EF10AA008CF76B /* GetUp */,
+				BE91B99918EF10AA008CF76B /* GetUpTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE91B97418EF10AA008CF76B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BEE45FA41900880000A04C59 /* Assets in Resources */,
+				BE91B99018EF10AA008CF76B /* Main_iPad.storyboard in Resources */,
+				BE78FB9418F86F98000B8490 /* Main_iPhone.storyboard in Resources */,
+				BE91B99518EF10AA008CF76B /* Images.xcassets in Resources */,
+				BE91B98418EF10AA008CF76B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE91B99818EF10AA008CF76B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE91B9A618EF10AA008CF76B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		558420FB9ED64A489299C987 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		745A2716DA6D4D43B9E66032 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE91B97218EF10AA008CF76B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE91B99318EF10AA008CF76B /* TBViewController.m in Sources */,
+				BE91B98A18EF10AA008CF76B /* TBAppDelegate.m in Sources */,
+				BEB0E53619003CE0003DB327 /* TBYouTubePlayerViewController.m in Sources */,
+				BE91B98618EF10AA008CF76B /* main.m in Sources */,
+				BECECD8C190839BE002E76E5 /* TBPageViewParent.m in Sources */,
+				BEEC90B018FE364000228A66 /* TBSecondViewController.m in Sources */,
+				BECFA60019060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m in Sources */,
+				BECFA5F9190607D20052968B /* XCDYouTubeVideoPlayerViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE91B99618EF10AA008CF76B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE91B9A818EF10AA008CF76B /* GetUpTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE91B9A018EF10AA008CF76B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE91B97518EF10AA008CF76B /* GetUp */;
+			targetProxy = BE91B99F18EF10AA008CF76B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE91B98218EF10AA008CF76B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE91B98318EF10AA008CF76B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BE91B98B18EF10AA008CF76B /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE91B98C18EF10AA008CF76B /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BE91B98E18EF10AA008CF76B /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE91B98F18EF10AA008CF76B /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		BE91B9A418EF10AA008CF76B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE91B9A518EF10AA008CF76B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE91B9A918EF10AA008CF76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE91B9AA18EF10AA008CF76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE91B9AC18EF10AA008CF76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B523BEE5D80341C787F10F3D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/travisbogosian/Documents/FacebookSDK,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GetUp/GetUp-Prefix.pch";
+				INFOPLIST_FILE = "GetUp/GetUp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BE91B9AD18EF10AA008CF76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B523BEE5D80341C787F10F3D /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					/Users/travisbogosian/Documents/FacebookSDK,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GetUp/GetUp-Prefix.pch";
+				INFOPLIST_FILE = "GetUp/GetUp-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BE91B9AF18EF10AA008CF76B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GetUp.app/GetUp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GetUp/GetUp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "GetUpTests/GetUpTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		BE91B9B018EF10AA008CF76B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GetUp.app/GetUp";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GetUp/GetUp-Prefix.pch";
+				INFOPLIST_FILE = "GetUpTests/GetUpTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE91B97118EF10AA008CF76B /* Build configuration list for PBXProject "GetUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE91B9A918EF10AA008CF76B /* Debug */,
+				BE91B9AA18EF10AA008CF76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE91B9AB18EF10AA008CF76B /* Build configuration list for PBXNativeTarget "GetUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE91B9AC18EF10AA008CF76B /* Debug */,
+				BE91B9AD18EF10AA008CF76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE91B9AE18EF10AA008CF76B /* Build configuration list for PBXNativeTarget "GetUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE91B9AF18EF10AA008CF76B /* Debug */,
+				BE91B9B018EF10AA008CF76B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE91B96E18EF10AA008CF76B /* Project object */;
+}
