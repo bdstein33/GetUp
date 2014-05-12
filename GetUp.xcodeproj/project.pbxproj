@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A57C0F2F01F540E2B22C89AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D45EC5113304D8AB16B6B96 /* libPods.a */; };
+		BE132BD419202EE600F9EBEC /* TBEndpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132BD319202EE600F9EBEC /* TBEndpointManager.m */; };
+		BE132BD719216BDC00F9EBEC /* TBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132BD619216BDC00F9EBEC /* TBFacebookManager.m */; };
 		BE78FB9418F86F98000B8490 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE91B98B18EF10AA008CF76B /* Main_iPhone.storyboard */; };
+		BE822A3E1909CC0600D0AA75 /* wakeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BE822A3D1909CC0600D0AA75 /* wakeup.mp3 */; };
 		BE91B97A18EF10AA008CF76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97918EF10AA008CF76B /* Foundation.framework */; };
 		BE91B97C18EF10AA008CF76B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97B18EF10AA008CF76B /* CoreGraphics.framework */; };
 		BE91B97E18EF10AA008CF76B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97D18EF10AA008CF76B /* UIKit.framework */; };
@@ -46,6 +49,11 @@
 /* Begin PBXFileReference section */
 		4D45EC5113304D8AB16B6B96 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B523BEE5D80341C787F10F3D /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		BE132BD219202EE600F9EBEC /* TBEndpointManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBEndpointManager.h; sourceTree = "<group>"; };
+		BE132BD319202EE600F9EBEC /* TBEndpointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBEndpointManager.m; sourceTree = "<group>"; };
+		BE132BD519216BDC00F9EBEC /* TBFacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFacebookManager.h; sourceTree = "<group>"; };
+		BE132BD619216BDC00F9EBEC /* TBFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFacebookManager.m; sourceTree = "<group>"; };
+		BE822A3D1909CC0600D0AA75 /* wakeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wakeup.mp3; sourceTree = "<group>"; };
 		BE91B97618EF10AA008CF76B /* GetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE91B97918EF10AA008CF76B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE91B97B18EF10AA008CF76B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +119,7 @@
 		BE91B96D18EF10AA008CF76B = {
 			isa = PBXGroup;
 			children = (
+				BE822A3D1909CC0600D0AA75 /* wakeup.mp3 */,
 				BE91B97F18EF10AA008CF76B /* GetUp */,
 				BE91B9A118EF10AA008CF76B /* GetUpTests */,
 				BE91B97818EF10AA008CF76B /* Frameworks */,
@@ -152,6 +161,10 @@
 				BE91B98E18EF10AA008CF76B /* Main_iPad.storyboard */,
 				BE91B99118EF10AA008CF76B /* TBViewController.h */,
 				BE91B99218EF10AA008CF76B /* TBViewController.m */,
+				BE132BD219202EE600F9EBEC /* TBEndpointManager.h */,
+				BE132BD319202EE600F9EBEC /* TBEndpointManager.m */,
+				BE132BD519216BDC00F9EBEC /* TBFacebookManager.h */,
+				BE132BD619216BDC00F9EBEC /* TBFacebookManager.m */,
 				BEB0E53319003CE0003DB327 /* TBYouTubePlayerViewController.h */,
 				BEB0E53419003CE0003DB327 /* TBYouTubePlayerViewController.m */,
 				BEEC90AE18FE364000228A66 /* TBSecondViewController.h */,
@@ -286,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEE45FA41900880000A04C59 /* Assets in Resources */,
+				BE822A3E1909CC0600D0AA75 /* wakeup.mp3 in Resources */,
 				BE91B99018EF10AA008CF76B /* Main_iPad.storyboard in Resources */,
 				BE78FB9418F86F98000B8490 /* Main_iPhone.storyboard in Resources */,
 				BE91B99518EF10AA008CF76B /* Images.xcassets in Resources */,
@@ -344,7 +358,9 @@
 				BE91B99318EF10AA008CF76B /* TBViewController.m in Sources */,
 				BE91B98A18EF10AA008CF76B /* TBAppDelegate.m in Sources */,
 				BEB0E53619003CE0003DB327 /* TBYouTubePlayerViewController.m in Sources */,
+				BE132BD419202EE600F9EBEC /* TBEndpointManager.m in Sources */,
 				BE91B98618EF10AA008CF76B /* main.m in Sources */,
+				BE132BD719216BDC00F9EBEC /* TBFacebookManager.m in Sources */,
 				BECECD8C190839BE002E76E5 /* TBPageViewParent.m in Sources */,
 				BEEC90B018FE364000228A66 /* TBSecondViewController.m in Sources */,
 				BECFA60019060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m in Sources */,

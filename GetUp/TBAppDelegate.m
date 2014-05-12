@@ -9,7 +9,10 @@
 #import "TBAppDelegate.h"
 #import <FacebookSDK/FacebookSDK.h>
 
+
 @implementation TBAppDelegate
+
+@synthesize _player;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -25,9 +28,18 @@
     pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];
     pageControl.backgroundColor = [UIColor blackColor];
     
+    NSString *notificationName = @"wakeUpAudio";
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(playAlarmSound:)
+     name:notificationName
+     object:nil];
+    
+    
+    
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -48,6 +60,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    application.applicationIconBadgeNumber = 0;
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
@@ -56,6 +69,7 @@
 }
 - (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
 {
+    /*
     UIApplicationState state = [application applicationState];
     if (state == UIApplicationStateActive) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Video Ready!"
@@ -64,7 +78,7 @@
                                               otherButtonTitles:nil];
         [alert show];
     }
-    
+    */
     // Set icon badge number to zero
     application.applicationIconBadgeNumber = 0;
 }
@@ -79,6 +93,37 @@
     // You can add your app-specific url handling code here if needed
     
     return wasHandled;
+}
+- (void)playAlarmSound:(NSNotification*)n
+{
+    NSString *url_string = [[NSBundle mainBundle] pathForResource:@"wakeup" ofType:@"mp3"];
+    
+    if (url_string) {
+        NSError *error;
+        NSURL *url = [NSURL fileURLWithPath:url_string];
+        
+        _player = [[AVAudioPlayer alloc]
+                   initWithContentsOfURL:url
+                   error:&error];
+        _player.numberOfLoops = -1;
+        
+        [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
+        [[AVAudioSession sharedInstance] setActive: YES error: nil];
+        [[UIApplication sharedApplication] beginReceivingRemoteControlEvents];
+        
+        if(!error)
+        {
+            NSLog(@"Playing audio");
+            [_player play];
+        }
+        else
+            NSLog(@"Error occurred: %@", [error localizedDescription]);
+    }
+    else
+    {
+        NSLog(@"Audio file not found.");
+    }
+    
 }
 
 @end

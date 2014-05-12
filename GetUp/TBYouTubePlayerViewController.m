@@ -12,7 +12,9 @@
 #define degreesToRadian(x) (M_PI * (x) / 180.0)
 
 @interface TBYouTubePlayerViewController ()
-
+{
+    XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
+}
 @end
 
 @implementation TBYouTubePlayerViewController
@@ -43,11 +45,15 @@
 	self.mYouTubeView.transform = CGAffineTransformMakeRotation(degreesToRadian(90));
 	self.mYouTubeView.bounds = CGRectMake(y, 0.0, height, 320);
     
-    XCDYouTubeVideoPlayerViewController *videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:mVideoToPlay];
+    videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:mVideoToPlay];
     [videoPlayerViewController presentInView:self.mYouTubeView];
     [videoPlayerViewController.moviePlayer play];
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [videoPlayerViewController.moviePlayer stop];
+}
 
 - (void)didReceiveMemoryWarning
 {

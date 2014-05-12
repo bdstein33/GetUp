@@ -77,12 +77,13 @@
     
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main_iPhone"
                                    bundle:nil];
+    
     switch(index)
     {
         case 0:
             return [sb instantiateViewControllerWithIdentifier:@"TempView"];
         case 1:
-            return [sb instantiateViewControllerWithIdentifier:@"HomeView"];
+            return (TBViewController*)[sb instantiateViewControllerWithIdentifier:@"HomeView"];
         case 2:
             return [sb instantiateViewControllerWithIdentifier:@"SearchView"];
             
@@ -100,4 +101,5 @@
     // The selected item reflected in the page indicator.
     return 1;
 }
+
 @end

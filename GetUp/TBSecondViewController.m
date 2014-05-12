@@ -9,6 +9,7 @@
 #import "TBSecondViewController.h"
 #import "TBViewController.h"
 #import "TBYouTubeSearchResultCellTableViewCell.h"
+#import "TBPageViewParent.h"
 
 @interface TBSecondViewController ()
 
@@ -68,11 +69,14 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     selectedVideo = indexPath.row;
-    [self performSegueWithIdentifier:@"exitToAlarmScreen" sender:self];
+    NSString *notificationName = @"setVideo";
+    NSDictionary *dictionary = [NSDictionary dictionaryWithObject:((YouTubeInformation*)[_mSearchedItems objectAtIndex:selectedVideo]).url forKey:@"vidURL"];
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:dictionary];
 }
 
 #pragma mark - Navigation
 
+/*
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
@@ -84,6 +88,7 @@
         NSLog(@"Leaving with %@",((YouTubeInformation*)[_mSearchedItems objectAtIndex:selectedVideo]).url);
     }
 }
+*/
 
 - (void) dispatchYouTubeDataSearchRequest:(NSString*)searchParams
 {

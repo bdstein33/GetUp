@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface YouTubeInformation: NSObject
-     @property NSString * url;
-     @property NSString * name;
+    @property NSString * url;
+    @property NSString * name;
     @property NSString * descrip;
     @property NSString * thumbURL;
 @end

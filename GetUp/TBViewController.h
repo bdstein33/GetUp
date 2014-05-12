@@ -12,6 +12,7 @@
 @interface TBViewController : UIViewController <FBLoginViewDelegate>
 {
     NSDate * _mWakeUpTime;
+    NSMutableData *_responseData;
 }
 
 @property (weak, nonatomic) IBOutlet UILabel *mCurrentTime;
@@ -20,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *mTimeToWake;
 @property NSString* mWakeVideo;
 
-- (IBAction)playVideo:(id)sender;
 - (IBAction)setAlarm:(id)sender;
 - (void)intervalUpate:(NSTimer*)timer;
 - (void)updateCurrentTime;

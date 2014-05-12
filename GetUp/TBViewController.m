@@ -8,9 +8,13 @@
 
 #import "TBViewController.h"
 #import "TBYouTubePlayerViewController.h"
+#import "TBPageViewParent.h"
+#import "TBEndpointManager.h"
+#import "TBFacebookManager.h"
 
 @interface TBViewController ()
-
+{
+}
 @end
 
 @implementation TBViewController
@@ -26,11 +30,19 @@
     [self updateCurrentTime];
     
     _mWakeUpTime = (id)[NSNull null];
-    mWakeVideo = @"LC-U7ya7wHA";
-    
+
     //Start update loop
     [NSTimer scheduledTimerWithTimeInterval:1.0f
                                      target:self selector:@selector(intervalUpate:) userInfo:nil repeats:YES];
+    
+    self.mWakeVideo = @"LC-U7ya7wHA";
+
+    NSString *notificationName = @"setVideo";
+    [[NSNotificationCenter defaultCenter]
+     addObserver:self
+     selector:@selector(receiveWakeUpVideo:)
+     name:notificationName
+     object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +58,7 @@
     
     NSDateFormatter *DateFormatter=[[NSDateFormatter alloc] init];
     [DateFormatter setDateFormat:@"hh:mm"];
-    NSString * time_string = [DateFormatter stringFromDate:_mWakeUpTime];
+    //NSString * time_string = [DateFormatter stringFromDate:_mWakeUpTime];
     
     NSLog(@"Alarm set for %@",_mWakeUpTime);
     
@@ -98,9 +110,16 @@
     TBYouTubePlayerViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"YouTubePlayerView"];
     vc.mVideoToPlay = mWakeVideo;
     [self presentViewController:vc animated:YES completion:nil];
+    
+    NSString *notificationName = @"wakeUpAudio";
+    [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:nil];
+}
+-(void)receiveWakeUpVideo:(NSNotification*)n
+{
+    mWakeVideo = [n.userInfo objectForKey:@"vidURL"];
 }
 
-#pragma <#arguments#>
+#pragma FacebookLogin
 - (void) loginViewShowingLoggedOutUser:(FBLoginView *)loginView
 {
     NSLog(@"Logged out via FB");
@@ -111,7 +130,17 @@
 }
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
 {
-    NSLog(@"%@ is the current logged in user.",[user name]);
+    [[TBEndpointManager sharedManager] sendFBData: [user username] andFirstName:[user first_name] andLastName:[user last_name] andPicURL:[user id]];
+   
+    [[TBFacebookManager sharedManager] setUserID:[user id]];
+    [[TBFacebookManager sharedManager] fetchFriendsWithApp];
+    
+    [[TBEndpointManager sharedManager] retrieveMessagesTo:[[TBFacebookManager sharedManager] userID]];
+}
+
+- (void)request:(FBRequest *)request didLoad:(id)result {
+    //ok so it's a dictionary with one element (key="data"), which is an array of dictionaries, each with "name" and "id" keys
+    NSLog(@"Got this: %@",[(NSDictionary *)result objectForKey:@"data"]);
 }
 - (BOOL)prefersStatusBarHidden
 {
@@ -123,6 +152,9 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+
+    NSLog(@"Video to play: %@", mWakeVideo);
+
     if([segue.identifier isEqualToString:@"toYouTubeView"])
         ((TBYouTubePlayerViewController*)[segue destinationViewController]).mVideoToPlay = mWakeVideo;
 }
@@ -130,5 +162,4 @@
 -(IBAction)unwindFromViewController2:(UIStoryboardSegue*)segue
 {
 }
-
 @end
