@@ -12,6 +12,9 @@
 {
     NSMutableData *_responseData;
 }
+@property BOOL initialized;
+@property NSMutableArray * mPendingMessages;
+
 
 + (id)sharedManager;
 - (void)sendFBData:(NSString*)username

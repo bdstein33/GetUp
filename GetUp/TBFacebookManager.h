@@ -11,9 +11,8 @@
 
 @interface TBFacebookManager : NSObject
 {
-    NSMutableArray * mFriendsWithApp;
 }
-
+@property NSMutableArray * mFriendsWithApp;
 @property NSString * userID;
 
 + (id)sharedManager;

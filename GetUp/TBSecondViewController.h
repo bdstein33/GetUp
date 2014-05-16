@@ -29,4 +29,5 @@
     NSMutableArray * _mSearchedItems;
     int selectedVideo;
 }
+
 @end

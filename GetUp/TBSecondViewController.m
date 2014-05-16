@@ -10,6 +10,7 @@
 #import "TBViewController.h"
 #import "TBYouTubeSearchResultCellTableViewCell.h"
 #import "TBPageViewParent.h"
+#import "TBVideoSelectionViewController.h"
 
 @interface TBSecondViewController ()
 
@@ -66,29 +67,41 @@
     [searchBar resignFirstResponder];
     [self dispatchYouTubeDataSearchRequest: searchBar.text];
 }
+
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    selectedVideo = indexPath.row;
+ 
+    //selectedVideo = indexPath.row;
+    
+    /*
     NSString *notificationName = @"setVideo";
     NSDictionary *dictionary = [NSDictionary dictionaryWithObject:((YouTubeInformation*)[_mSearchedItems objectAtIndex:selectedVideo]).url forKey:@"vidURL"];
     [[NSNotificationCenter defaultCenter] postNotificationName:notificationName object:nil userInfo:dictionary];
+     
+    
+    //Initialize new viewController
+    TBVideoSelectionViewController *viewController = [[TBVideoSelectionViewController alloc] initWithNibName:@"NewViewController" bundle:nil];
+    //Push new view to navigationController stack
+    [self.navigationController pushViewController:viewController animated:YES];
+  */
 }
 
 #pragma mark - Navigation
 
-/*
+
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if(selectedVideo >= 0)
+    if([[segue identifier]  isEqual: @"VideoSelection"])
     {
-        ((TBViewController*)[segue destinationViewController]).mWakeVideo = ((YouTubeInformation*)[_mSearchedItems objectAtIndex:selectedVideo]).url;
-        NSLog(@"Leaving with %@",((YouTubeInformation*)[_mSearchedItems objectAtIndex:selectedVideo]).url);
+        UITableViewCell* cell = (UITableViewCell*)sender;
+        TBVideoSelectionViewController* selectionView = (TBVideoSelectionViewController*)[segue destinationViewController];
+        [selectionView setMVideoToPlay:((YouTubeInformation*)[_mSearchedItems objectAtIndex:[mTableView indexPathForCell:cell].row]).url];
     }
 }
-*/
+
 
 - (void) dispatchYouTubeDataSearchRequest:(NSString*)searchParams
 {
@@ -130,8 +143,6 @@
         newInfo.descrip = [info objectForKey:@"description"];
         newInfo.thumbURL = thumb;
         
-        NSLog(@"Item: %@",item);
-        
         //If there is a video to play, add it to the list
         if(newInfo.url != NULL)
             [_mSearchedItems addObject:newInfo];
@@ -142,4 +153,13 @@
     [mTableView reloadData];
 }
 
+-(IBAction)unwindToThisController:(UIStoryboardSegue*)segue
+{
+}
+-(IBAction)unwindToMainScreen:(UIStoryboardSegue*)segue
+{    
+    UIPageViewController* pvc = ((UIPageViewController*)[self parentViewController]);
+     NSArray *viewControllers = [NSArray arrayWithObject: [((TBPageViewParent*)[pvc parentViewController]) pageViewController:pvc viewControllerBeforeViewController:self]];
+    [pvc setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
+}
 @end

@@ -41,7 +41,7 @@
     [self.pageController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:nil];
     
     [self addChildViewController:self.pageController];
-    [[self view] addSubview:[self.pageController view]];
+    [[self pagesView] addSubview:[self.pageController view]];
     [self.pageController didMoveToParentViewController:self];
 }
 
@@ -81,7 +81,7 @@
     switch(index)
     {
         case 0:
-            return [sb instantiateViewControllerWithIdentifier:@"TempView"];
+            return [sb instantiateViewControllerWithIdentifier:@"MessagesView"];
         case 1:
             return (TBViewController*)[sb instantiateViewControllerWithIdentifier:@"HomeView"];
         case 2:

@@ -130,12 +130,17 @@
 }
 -(void) loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
 {
+    if([[TBEndpointManager sharedManager] initialized])
+        return;
+    
     [[TBEndpointManager sharedManager] sendFBData: [user username] andFirstName:[user first_name] andLastName:[user last_name] andPicURL:[user id]];
    
     [[TBFacebookManager sharedManager] setUserID:[user id]];
     [[TBFacebookManager sharedManager] fetchFriendsWithApp];
     
     [[TBEndpointManager sharedManager] retrieveMessagesTo:[[TBFacebookManager sharedManager] userID]];
+    
+    [[TBEndpointManager sharedManager] setInitialized:true];
 }
 
 - (void)request:(FBRequest *)request didLoad:(id)result {

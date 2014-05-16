@@ -11,6 +11,7 @@
 @implementation TBFacebookManager
 
 @synthesize userID;
+@synthesize mFriendsWithApp;
 #pragma mark Singleton Methods
 + (id)sharedManager {
     static TBFacebookManager *sharedFBManager = nil;
@@ -30,7 +31,7 @@
 
 -(void)fetchFriendsWithApp
 {
-    FBRequest *request =  [FBRequest  requestWithGraphPath:@"me/friends" parameters:@{@"fields":@"installed"} HTTPMethod:@"GET"];
+    FBRequest *request =  [FBRequest  requestWithGraphPath:@"me/friends" parameters:@{@"fields":@"name,picture,installed"} HTTPMethod:@"GET"];
     
     [request startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error)
      {
@@ -38,12 +39,15 @@
          for (int i = 0; i < [frnd_arr count]; i++)
          {
              //NOTE, MOVE BELOW ONCE FRIENDS HAVE APP
-             [mFriendsWithApp addObject:[[frnd_arr objectAtIndex:i] objectForKey:@"id"]];
+             //if(![mFriendsWithApp containsObject:[[frnd_arr objectAtIndex:i] objectForKey:@"id"]])
+                 //[mFriendsWithApp addObject:[[frnd_arr objectAtIndex:i] objectForKey:@"id"]];
              //END NOTE
              
              if([[[frnd_arr objectAtIndex:i] objectForKey:@"installed"] boolValue])
              {
                  //IF APP IS INSTALLED, DO SOMETHING
+                 if(![mFriendsWithApp containsObject:[frnd_arr objectAtIndex:i]])
+                     [mFriendsWithApp addObject:[frnd_arr objectAtIndex:i]];
              }
          }
          NSLog(@"Resulting friends with app found: %i",[mFriendsWithApp count]);

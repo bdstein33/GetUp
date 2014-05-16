@@ -10,6 +10,11 @@
 		A57C0F2F01F540E2B22C89AA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D45EC5113304D8AB16B6B96 /* libPods.a */; };
 		BE132BD419202EE600F9EBEC /* TBEndpointManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132BD319202EE600F9EBEC /* TBEndpointManager.m */; };
 		BE132BD719216BDC00F9EBEC /* TBFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132BD619216BDC00F9EBEC /* TBFacebookManager.m */; };
+		BE132BDA19232BE200F9EBEC /* TBMessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132BD919232BE200F9EBEC /* TBMessagesViewController.m */; };
+		BE132BDD19232C3300F9EBEC /* TBMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE132BDC19232C3300F9EBEC /* TBMessageTableViewCell.m */; };
+		BE583FF4192535DC00E5669B /* TBVideoSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE583FF3192535DC00E5669B /* TBVideoSelectionViewController.m */; };
+		BE583FF7192543EB00E5669B /* TBFriendListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BE583FF6192543EB00E5669B /* TBFriendListViewController.m */; };
+		BE583FFA19255F5E00E5669B /* TBFriendTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BE583FF919255F5E00E5669B /* TBFriendTableViewCell.m */; };
 		BE78FB9418F86F98000B8490 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE91B98B18EF10AA008CF76B /* Main_iPhone.storyboard */; };
 		BE822A3E1909CC0600D0AA75 /* wakeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BE822A3D1909CC0600D0AA75 /* wakeup.mp3 */; };
 		BE91B97A18EF10AA008CF76B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE91B97918EF10AA008CF76B /* Foundation.framework */; };
@@ -53,6 +58,16 @@
 		BE132BD319202EE600F9EBEC /* TBEndpointManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBEndpointManager.m; sourceTree = "<group>"; };
 		BE132BD519216BDC00F9EBEC /* TBFacebookManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFacebookManager.h; sourceTree = "<group>"; };
 		BE132BD619216BDC00F9EBEC /* TBFacebookManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFacebookManager.m; sourceTree = "<group>"; };
+		BE132BD819232BE200F9EBEC /* TBMessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMessagesViewController.h; sourceTree = "<group>"; };
+		BE132BD919232BE200F9EBEC /* TBMessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMessagesViewController.m; sourceTree = "<group>"; };
+		BE132BDB19232C3300F9EBEC /* TBMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBMessageTableViewCell.h; sourceTree = "<group>"; };
+		BE132BDC19232C3300F9EBEC /* TBMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBMessageTableViewCell.m; sourceTree = "<group>"; };
+		BE583FF2192535DC00E5669B /* TBVideoSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBVideoSelectionViewController.h; sourceTree = "<group>"; };
+		BE583FF3192535DC00E5669B /* TBVideoSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBVideoSelectionViewController.m; sourceTree = "<group>"; };
+		BE583FF5192543EB00E5669B /* TBFriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFriendListViewController.h; sourceTree = "<group>"; };
+		BE583FF6192543EB00E5669B /* TBFriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFriendListViewController.m; sourceTree = "<group>"; };
+		BE583FF819255F5E00E5669B /* TBFriendTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TBFriendTableViewCell.h; sourceTree = "<group>"; };
+		BE583FF919255F5E00E5669B /* TBFriendTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBFriendTableViewCell.m; sourceTree = "<group>"; };
 		BE822A3D1909CC0600D0AA75 /* wakeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wakeup.mp3; sourceTree = "<group>"; };
 		BE91B97618EF10AA008CF76B /* GetUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GetUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE91B97918EF10AA008CF76B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -169,10 +184,20 @@
 				BEB0E53419003CE0003DB327 /* TBYouTubePlayerViewController.m */,
 				BEEC90AE18FE364000228A66 /* TBSecondViewController.h */,
 				BEEC90AF18FE364000228A66 /* TBSecondViewController.m */,
+				BE583FF2192535DC00E5669B /* TBVideoSelectionViewController.h */,
+				BE583FF3192535DC00E5669B /* TBVideoSelectionViewController.m */,
+				BE583FF5192543EB00E5669B /* TBFriendListViewController.h */,
+				BE583FF6192543EB00E5669B /* TBFriendListViewController.m */,
+				BE132BD819232BE200F9EBEC /* TBMessagesViewController.h */,
+				BE132BD919232BE200F9EBEC /* TBMessagesViewController.m */,
 				BECECD8A190839BE002E76E5 /* TBPageViewParent.h */,
 				BECECD8B190839BE002E76E5 /* TBPageViewParent.m */,
 				BECFA5FE19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.h */,
 				BECFA5FF19060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m */,
+				BE583FF819255F5E00E5669B /* TBFriendTableViewCell.h */,
+				BE583FF919255F5E00E5669B /* TBFriendTableViewCell.m */,
+				BE132BDB19232C3300F9EBEC /* TBMessageTableViewCell.h */,
+				BE132BDC19232C3300F9EBEC /* TBMessageTableViewCell.m */,
 				BECFA5F7190607D20052968B /* XCDYouTubeVideoPlayerViewController.h */,
 				BECFA5F8190607D20052968B /* XCDYouTubeVideoPlayerViewController.m */,
 				BEE45FA11900880000A04C59 /* Assets */,
@@ -358,12 +383,17 @@
 				BE91B99318EF10AA008CF76B /* TBViewController.m in Sources */,
 				BE91B98A18EF10AA008CF76B /* TBAppDelegate.m in Sources */,
 				BEB0E53619003CE0003DB327 /* TBYouTubePlayerViewController.m in Sources */,
+				BE132BDA19232BE200F9EBEC /* TBMessagesViewController.m in Sources */,
 				BE132BD419202EE600F9EBEC /* TBEndpointManager.m in Sources */,
+				BE132BDD19232C3300F9EBEC /* TBMessageTableViewCell.m in Sources */,
 				BE91B98618EF10AA008CF76B /* main.m in Sources */,
 				BE132BD719216BDC00F9EBEC /* TBFacebookManager.m in Sources */,
 				BECECD8C190839BE002E76E5 /* TBPageViewParent.m in Sources */,
 				BEEC90B018FE364000228A66 /* TBSecondViewController.m in Sources */,
+				BE583FF7192543EB00E5669B /* TBFriendListViewController.m in Sources */,
 				BECFA60019060F1B0052968B /* TBYouTubeSearchResultCellTableViewCell.m in Sources */,
+				BE583FF4192535DC00E5669B /* TBVideoSelectionViewController.m in Sources */,
+				BE583FFA19255F5E00E5669B /* TBFriendTableViewCell.m in Sources */,
 				BECFA5F9190607D20052968B /* XCDYouTubeVideoPlayerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +564,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8F038DC2-F23F-4A90-88ED-EA68B462EA84";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

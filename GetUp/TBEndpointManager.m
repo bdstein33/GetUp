@@ -14,6 +14,9 @@
 
 NSString * APPCODE = @"HFW2UIHDWF234HOQBN2OFU7H";
 
+@synthesize initialized;
+@synthesize mPendingMessages;
+
 #pragma mark Singleton Methods
 + (id)sharedManager {
     static TBEndpointManager *sharedMyManager = nil;
@@ -26,7 +29,8 @@ NSString * APPCODE = @"HFW2UIHDWF234HOQBN2OFU7H";
 
 - (id)init {
     if (self = [super init]) {
-
+        mPendingMessages = [[NSMutableArray alloc] init];
+        initialized = false;
     }
     return self;
 }
@@ -113,7 +117,29 @@ NSString * APPCODE = @"HFW2UIHDWF234HOQBN2OFU7H";
     // You can parse the stuff in your instance variable now
     NSString *responseString = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
     
-    NSLog(@"Finished connection with output: %@",responseString);
+    //NSLog(@"Finished connection with output: %@",responseString);
+    
+    NSError *error;
+
+    NSDictionary *jsonReturn = [[NSDictionary alloc]init];
+    jsonReturn = (NSDictionary*)[NSJSONSerialization JSONObjectWithData:_responseData options:kNilOptions error:&error];
+    if(error)
+    {
+        NSLog(@"Received output: %@",responseString);
+        return;
+    }
+    else
+    {
+        if([[jsonReturn objectForKey:@"command"]  isEqual: @"get_messages"])
+        {
+            NSDictionary * messages = (NSDictionary*)[jsonReturn objectForKey:@"messages"];
+            for(NSDictionary *m in messages)
+            {
+                [mPendingMessages addObject:m];
+            }
+            NSLog(@"Pending messages found: %@",mPendingMessages);
+        }
+    }
 }
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     // The request has failed for some reason!

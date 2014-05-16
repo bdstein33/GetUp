@@ -9,8 +9,6 @@
 #import "TBYouTubePlayerViewController.h"
 #import "XCDYouTubeVideoPlayerViewController.h"
 
-#define degreesToRadian(x) (M_PI * (x) / 180.0)
-
 @interface TBYouTubePlayerViewController ()
 {
     XCDYouTubeVideoPlayerViewController *videoPlayerViewController;
@@ -33,18 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    CGFloat height = [UIScreen mainScreen].bounds.size.height;
-    float y;
-    if(height == 568)
-        y = 36.0;
-    else
-        y = 80.0;
-    
-    self.mYouTubeView.transform = CGAffineTransformIdentity;
-	self.mYouTubeView.transform = CGAffineTransformMakeRotation(degreesToRadian(90));
-	self.mYouTubeView.bounds = CGRectMake(y, 0.0, height, 320);
-    
+
     videoPlayerViewController = [[XCDYouTubeVideoPlayerViewController alloc] initWithVideoIdentifier:mVideoToPlay];
     [videoPlayerViewController presentInView:self.mYouTubeView];
     [videoPlayerViewController.moviePlayer play];
@@ -60,9 +47,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 

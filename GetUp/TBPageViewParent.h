@@ -11,5 +11,6 @@
 @interface TBPageViewParent : UIViewController <UIPageViewControllerDataSource>
 
 @property (strong, nonatomic) UIPageViewController *pageController;
+@property (strong, nonatomic) IBOutlet UIView *pagesView;
 
 @end
